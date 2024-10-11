@@ -1,0 +1,5 @@
+class DeputadoFederal:
+  def __init__(self, numero):
+    super().__init__()
+    self.numero = numero
+    self.digitos = 4
