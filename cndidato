@@ -1,0 +1,13 @@
+from Pessoa import Pessoa
+class Candidato(Pessoa):
+  def __init__(self, nome,cpf, idade, numero, part, proposta):
+    super().__init__(nome,cpf, idade)
+    self.numero = numero
+    self.part = part
+    self.proposta = proposta
+
+  def __verifica_numero__(self):
+    if self.numero < 0:
+      raise ValueError("Numero invalido")
+  def __str__(self):
+    return super().__str__() + " Numero: " + str(self.numero) + " Partido: " + self.part + " Proposta: " + self.proposta
