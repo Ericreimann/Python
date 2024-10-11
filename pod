@@ -1,0 +1,22 @@
+class Pessoa:
+  def __init__(self, nome,cpf, idade):
+    if nome.length > 50:
+      raise ValueError("Nome muito grande")
+    self.nome = nome
+    self.idade = idade
+    self.cpf = cpf
+
+  def setNome(self, nome):
+    self.nome = nome
+  def getNome(self):
+    return self.nome
+  def setIdade(self, idade):
+    self.idade = idade
+  def getIdade(self):
+    return self.idade
+  def setCpf(self, cpf):
+    self.cpf = cpf
+  def getCpf(self):
+    return self.cpf
+  def __str__(self):
+    return "Nome: " + self.nome + " Idade: " + str(self.idade) + " CPF: " + self.cpf
